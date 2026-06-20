@@ -71,12 +71,26 @@ const TEL_PLAIN = '08042248880';
         </div>
       </div>
 
-      <div style="margin-top:48px;text-align:center;">
-        <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--dark);">コンパニオンに応募する</h3>
-        <p style="font-size:0.9rem;color:var(--gray-light);margin-bottom:24px;">LINEまたはお電話でお気軽にご連絡ください。顔写真もLINEでお送りいただけます。</p>
-        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <div style="margin-top:48px;max-width:640px;margin-left:auto;margin-right:auto;">
+        <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--dark);text-align:center;">コンパニオンに応募する</h3>
+        <p style="font-size:0.9rem;color:var(--gray-light);margin-bottom:24px;text-align:center;">LINEに以下の内容をメッセージでお送りください。顔写真も一緒に送っていただけると助かります♪</p>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:28px;">
+          <p style="font-size:0.8rem;font-weight:700;color:var(--pink);margin-bottom:12px;">📋 送っていただく内容</p>
+          <ol style="padding-left:1.4em;line-height:2;font-size:0.9rem;color:var(--dark);">
+            <li>フルネーム（フリガナ）</li>
+            <li>電話番号</li>
+            <li>メールアドレス</li>
+            <li>住所</li>
+            <li>年齢</li>
+            <li>身分証の種類（免許証 / マイナンバーカード / パスポート など）</li>
+            <li>コンパニオン経験（あり / 未経験）</li>
+            <li>飲酒（飲める / 少し飲める / 飲めない）</li>
+            <li>顔写真</li>
+            <li>その他・質問など（あれば）</li>
+          </ol>
+        </div>
+        <div style="text-align:center;">
           <a href={LINE_URL} class="btn-line" target="_blank" rel="noopener noreferrer">LINEで応募する</a>
-          <a href={`tel:${TEL_PLAIN}`} class="btn-primary">📞 {TEL}</a>
         </div>
       </div>
     </div>
@@ -101,12 +115,25 @@ const TEL_PLAIN = '08042248880';
           </div>
         </div>
 
-        <div style="text-align:center;">
-          <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--dark);">送迎ドライバーに応募する</h3>
-          <p style="font-size:0.9rem;color:var(--gray-light);margin-bottom:24px;">LINEまたはお電話でお気軽にご連絡ください。</p>
-          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <div>
+          <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--dark);text-align:center;">送迎ドライバーに応募する</h3>
+          <p style="font-size:0.9rem;color:var(--gray-light);margin-bottom:24px;text-align:center;">LINEに以下の内容をメッセージでお送りください。</p>
+          <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:28px;">
+            <p style="font-size:0.8rem;font-weight:700;color:var(--pink);margin-bottom:12px;">📋 送っていただく内容</p>
+            <ol style="padding-left:1.4em;line-height:2;font-size:0.9rem;color:var(--dark);">
+              <li>フルネーム（フリガナ）</li>
+              <li>電話番号</li>
+              <li>メールアドレス</li>
+              <li>住所</li>
+              <li>年齢</li>
+              <li>身分証の種類（免許証 / マイナンバーカード など）</li>
+              <li>ドライバー経験（あり / なし）</li>
+              <li>所有車種</li>
+              <li>その他・質問など（あれば）</li>
+            </ol>
+          </div>
+          <div style="text-align:center;">
             <a href={LINE_URL} class="btn-line" target="_blank" rel="noopener noreferrer">LINEで応募する</a>
-            <a href={`tel:${TEL_PLAIN}`} class="btn-primary">📞 {TEL}</a>
           </div>
         </div>
       </div>
