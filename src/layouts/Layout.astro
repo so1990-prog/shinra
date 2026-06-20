@@ -8,8 +8,8 @@ export interface Props {
 }
 
 const {
-  title = '浜松コンパニオン派遣【森羅】浜松・静岡西部No.1｜宴会・パーティー対応',
-  description = '浜松市・静岡県西部のコンパニオン派遣なら森羅。業界15年以上・在籍150名超。宴会・懇親会・パーティーに明るく気さくな女の子を派遣。1名15,000円〜。当日相談OK。まずはLINEでお気軽にご相談ください。',
+  title = '浜松コンパニオン派遣【SHINRA】浜松・静岡西部No.1｜宴会・パーティー対応',
+  description = '浜松市・静岡県西部のコンパニオン派遣ならSHINRA。業界15年以上・在籍150名超。宴会・懇親会・パーティーに明るく気さくな女の子を派遣。2時間2名〜15,000円。まずはLINEでお気軽にご相談ください。',
   currentPath = '/',
 } = Astro.props;
 
@@ -33,7 +33,7 @@ const navLinks = [
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
-  <meta name="keywords" content="浜松 コンパニオン,浜松コンパニオン派遣,浜松 宴会コンパニオン,静岡 コンパニオン,浜松市 コンパニオン,森羅,SHINRA" />
+  <meta name="keywords" content="浜松 コンパニオン,浜松コンパニオン派遣,浜松 宴会コンパニオン,静岡 コンパニオン,浜松市 コンパニオン,SHINRA" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
@@ -45,7 +45,7 @@ const navLinks = [
   <script type="application/ld+json">{JSON.stringify({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "森羅（SHINRA）浜松コンパニオン派遣",
+    "name": "SHINRA 浜松コンパニオン派遣",
     "description": "浜松市・静岡県西部のコンパニオン派遣サービス。宴会・パーティー・各種イベントに対応。",
     "url": "https://shinra0101.com/",
     "telephone": TEL,
@@ -57,26 +57,24 @@ const navLinks = [
       "addressCountry": "JP"
     },
     "areaServed": ["浜松市","湖西市","磐田市","袋井市","掛川市","菊川市","御前崎市","牧之原市","島田市"],
-    "openingHours": "Mo-Su 10:00-22:00",
     "sameAs": ["https://www.instagram.com/shinra.hamamatsu/", LINE_URL]
   })}</script>
 </head>
 <body>
   <!-- TOP BAR -->
   <div class="topbar">
-    📞 {TEL}　|　受付時間 10:00〜22:00（年中無休）　|　まずはお気軽にLINEでご相談ください♪
+    📞 {TEL}　|　浜松・静岡県西部のコンパニオン派遣ならSHINRAへ
   </div>
 
   <!-- HEADER -->
   <header>
     <a href="/" class="logo">
-      <div class="logo-name">森羅</div>
-      <div class="logo-sub">浜松コンパニオン派遣 / SHINRA</div>
+      <div class="logo-name">SHINRA</div>
+      <div class="logo-sub">浜松コンパニオン派遣</div>
     </a>
     <div class="header-right">
       <div class="header-tel">
         <a href={`tel:${TEL_PLAIN}`}>📞 {TEL}</a>
-        <div class="header-time">受付 10:00〜22:00</div>
       </div>
       <a href={LINE_URL} class="header-line-btn" target="_blank" rel="noopener noreferrer">
         LINE相談
@@ -96,16 +94,15 @@ const navLinks = [
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">森羅</div>
+    <div class="footer-logo">SHINRA</div>
     <p class="footer-info">
       浜松コンパニオン派遣サービス<br />
-      受付時間：10:00〜22:00（年中無休）<br />
       TEL: {TEL}　|　E-mail: shinra.hamamatsu.0101@gmail.com
     </p>
     <div class="footer-nav">
       {navLinks.map(link => <a href={link.href}>{link.label}</a>)}
     </div>
-    <p class="footer-copy">&copy; 2024 森羅（SHINRA）All Rights Reserved.</p>
+    <p class="footer-copy">&copy; 2024 SHINRA All Rights Reserved.</p>
   </footer>
 
   <!-- ===== 常時表示フローティングバー ===== -->
