@@ -54,8 +54,8 @@ import Layout from '../../layouts/Layout.astro';
         </div>
       </div>
 
-      <div style="background:var(--pink-bg);border:1px solid var(--border);border-radius:12px;padding:32px;margin-top:40px;max-width:640px;margin-left:auto;margin-right:auto;">
-        <h3 style="font-size:1rem;font-weight:700;margin-bottom:20px;color:var(--dark);">応募条件・詳細</h3>
+      <div style="background:var(--pink-bg);border:1px solid var(--border);border-radius:12px;padding:28px;margin-top:40px;max-width:640px;margin-left:auto;margin-right:auto;">
+        <h3 style="font-size:1rem;font-weight:700;margin-bottom:16px;color:var(--dark);">応募条件・詳細</h3>
         <div class="price-notes">
           <div class="price-note">年齢：18歳以上（高校生不可）</div>
           <div class="price-note">経験：未経験大歓迎</div>
@@ -67,19 +67,86 @@ import Layout from '../../layouts/Layout.astro';
         </div>
       </div>
 
-      <div style="background:var(--pink-bg);border:1px solid var(--border);border-radius:12px;padding:32px;margin-top:24px;max-width:640px;margin-left:auto;margin-right:auto;">
-        <h3 style="font-size:1rem;font-weight:700;margin-bottom:16px;color:var(--dark);">応募に必要な情報</h3>
-        <p style="font-size:0.83rem;color:var(--gray);line-height:2;">
-          お問い合わせ時に以下をお知らせください：<br />
-          フルネーム・フリガナ・電話番号・メールアドレス・住所・年齢・身分証の種類・コンパニオン経験の有無・飲酒可否・連絡希望方法・顔写真
-        </p>
-      </div>
-
-      <div style="text-align:center;margin-top:32px;">
-        <p style="font-size:0.88rem;color:var(--gray);margin-bottom:16px;">まずはお気軽にLINEまたはお電話でご連絡ください♪</p>
-        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <!-- コンパニオン応募 LINE + フォーム -->
+      <div style="margin-top:40px;">
+        <h3 style="font-size:1rem;font-weight:700;text-align:center;margin-bottom:24px;color:var(--dark);">コンパニオンに応募する</h3>
+        <div style="display:flex;gap:12px;justify-content:center;margin-bottom:32px;flex-wrap:wrap;">
           <a href="https://page.line.me/225deoky" class="btn-line" target="_blank" rel="noopener noreferrer">LINEで応募する</a>
           <a href="tel:08042248880" class="btn-primary">📞 080-4224-8880</a>
+        </div>
+
+        <div class="inline-form" style="max-width:640px;">
+          <h3>📝 コンパニオン応募フォーム</h3>
+          <form action="https://formspree.io/f/shinra-recruit" method="POST">
+            <input type="hidden" name="apply_type" value="コンパニオン" />
+
+            <div class="form-row">
+              <label>フルネーム <span class="req">必須</span></label>
+              <input type="text" name="name" placeholder="例：山田 花子" required />
+            </div>
+            <div class="form-row">
+              <label>フリガナ <span class="req">必須</span></label>
+              <input type="text" name="furigana" placeholder="例：ヤマダ ハナコ" required />
+            </div>
+            <div class="form-row">
+              <label>電話番号 <span class="req">必須</span></label>
+              <input type="tel" name="tel" placeholder="090-0000-0000" required />
+            </div>
+            <div class="form-row">
+              <label>メールアドレス <span class="req">必須</span></label>
+              <input type="email" name="email" placeholder="example@gmail.com" required />
+            </div>
+            <div class="form-row">
+              <label>住所 <span class="req">必須</span></label>
+              <input type="text" name="address" placeholder="例：静岡県浜松市中央区〇〇町" required />
+            </div>
+            <div class="form-row">
+              <label>年齢 <span class="req">必須</span></label>
+              <input type="text" name="age" placeholder="例：22歳" required />
+            </div>
+            <div class="form-row">
+              <label>身分証の種類 <span class="req">必須</span></label>
+              <select name="id_type" required>
+                <option value="">選択してください</option>
+                <option value="運転免許証">運転免許証</option>
+                <option value="マイナンバーカード">マイナンバーカード</option>
+                <option value="パスポート">パスポート</option>
+                <option value="その他">その他</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label>コンパニオン経験</label>
+              <select name="experience">
+                <option value="未経験">未経験</option>
+                <option value="あり">あり</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label>飲酒</label>
+              <select name="drink">
+                <option value="飲める">飲める</option>
+                <option value="少し飲める">少し飲める</option>
+                <option value="飲めない">飲めない</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label>連絡希望方法</label>
+              <select name="contact_method">
+                <option value="電話">電話</option>
+                <option value="LINE">LINE</option>
+                <option value="メール">メール</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label>顔写真</label>
+              <p style="font-size:0.78rem;color:var(--gray-light);">フォームでは送信できないため、LINEまたはメールにてお送りください。</p>
+            </div>
+            <div class="form-row">
+              <label>その他・質問など</label>
+              <textarea name="message" placeholder="ご質問・ご要望などがあればお気軽にどうぞ"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">応募する</button>
+          </form>
         </div>
       </div>
     </div>
@@ -93,18 +160,86 @@ import Layout from '../../layouts/Layout.astro';
         <h2 class="section-title">送迎ドライバー<span>募集</span></h2>
         <p class="section-lead">副業OK・夕方〜の勤務</p>
       </div>
+
       <div style="max-width:600px;margin:0 auto;">
-        <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:32px;">
+        <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:28px;margin-bottom:32px;">
           <div class="price-notes">
             <div class="price-note">年齢：18歳以上・車所有・自動車保険加入者</div>
             <div class="price-note">日給：5,000〜10,000円</div>
             <div class="price-note">勤務時間：17時以降（深夜になる場合あり）</div>
             <div class="price-note">副業OK</div>
-            <div class="price-note">必要情報：フルネーム・年齢・車種・ドライバー経験など</div>
           </div>
-          <div style="text-align:center;margin-top:24px;">
-            <a href="tel:08042248880" class="btn-primary">📞 080-4224-8880</a>
-          </div>
+        </div>
+
+        <h3 style="font-size:1rem;font-weight:700;text-align:center;margin-bottom:20px;color:var(--dark);">送迎ドライバーに応募する</h3>
+        <div style="display:flex;gap:12px;justify-content:center;margin-bottom:28px;flex-wrap:wrap;">
+          <a href="https://page.line.me/225deoky" class="btn-line" target="_blank" rel="noopener noreferrer">LINEで応募する</a>
+          <a href="tel:08042248880" class="btn-primary">📞 080-4224-8880</a>
+        </div>
+
+        <div class="inline-form">
+          <h3>📝 ドライバー応募フォーム</h3>
+          <form action="https://formspree.io/f/shinra-recruit" method="POST">
+            <input type="hidden" name="apply_type" value="送迎ドライバー" />
+
+            <div class="form-row">
+              <label>フルネーム <span class="req">必須</span></label>
+              <input type="text" name="name" placeholder="例：山田 太郎" required />
+            </div>
+            <div class="form-row">
+              <label>フリガナ <span class="req">必須</span></label>
+              <input type="text" name="furigana" placeholder="例：ヤマダ タロウ" required />
+            </div>
+            <div class="form-row">
+              <label>電話番号 <span class="req">必須</span></label>
+              <input type="tel" name="tel" placeholder="090-0000-0000" required />
+            </div>
+            <div class="form-row">
+              <label>メールアドレス <span class="req">必須</span></label>
+              <input type="email" name="email" placeholder="example@gmail.com" required />
+            </div>
+            <div class="form-row">
+              <label>住所 <span class="req">必須</span></label>
+              <input type="text" name="address" placeholder="例：静岡県浜松市中央区〇〇町" required />
+            </div>
+            <div class="form-row">
+              <label>年齢 <span class="req">必須</span></label>
+              <input type="text" name="age" placeholder="例：35歳" required />
+            </div>
+            <div class="form-row">
+              <label>身分証の種類 <span class="req">必須</span></label>
+              <select name="id_type" required>
+                <option value="">選択してください</option>
+                <option value="運転免許証">運転免許証</option>
+                <option value="マイナンバーカード">マイナンバーカード</option>
+                <option value="パスポート">パスポート</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label>ドライバー経験</label>
+              <select name="driver_exp">
+                <option value="なし">なし</option>
+                <option value="あり">あり</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label>所有車種</label>
+              <input type="text" name="car" placeholder="例：トヨタ アルファード" />
+            </div>
+            <div class="form-row">
+              <label>連絡希望方法</label>
+              <select name="contact_method">
+                <option value="電話">電話</option>
+                <option value="LINE">LINE</option>
+                <option value="メール">メール</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label>その他・質問など</label>
+              <textarea name="message" placeholder="ご質問・ご要望などがあればお気軽にどうぞ"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">応募する</button>
+          </form>
         </div>
       </div>
     </div>

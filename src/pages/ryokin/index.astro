@@ -2,8 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout
-  title="料金システム｜浜松コンパニオン派遣【SHINRA】1名15,000円〜"
-  description="浜松コンパニオン派遣・SHINRAの料金システム。2時間1名15,000円〜。交通費・指名料・キャンセル料など詳しくご説明します。追加料金なし・明朗会計。"
+  title="料金システム｜浜松コンパニオン派遣【SHINRA】2時間2名〜15,000円"
+  description="浜松コンパニオン派遣・SHINRAの料金システム。2時間女の子2名〜15,000円。交通費・指名料・キャンセル料など詳しくご説明します。"
   currentPath="/ryokin/"
 >
   <div class="page-hero">
@@ -30,36 +30,15 @@ import Layout from '../../layouts/Layout.astro';
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>2名</td>
-              <td class="price-highlight">30,000円</td>
-              <td>16,000円</td>
-              <td>+交通費</td>
-            </tr>
-            <tr>
-              <td>3名</td>
-              <td class="price-highlight">45,000円</td>
-              <td>24,000円</td>
-              <td>+交通費</td>
-            </tr>
-            <tr>
-              <td>4名</td>
-              <td class="price-highlight">60,000円</td>
-              <td>32,000円</td>
-              <td>+交通費</td>
-            </tr>
-            <tr>
-              <td>5名</td>
-              <td class="price-highlight">75,000円</td>
-              <td>40,000円</td>
-              <td>+交通費</td>
-            </tr>
-            <tr>
-              <td>6名以上</td>
-              <td class="price-highlight">人数×15,000円</td>
-              <td>人数×8,000円</td>
-              <td>+交通費</td>
-            </tr>
+            <tr><td>2名</td><td class="price-highlight">30,000円</td><td>16,000円</td><td>+交通費</td></tr>
+            <tr><td>3名</td><td class="price-highlight">45,000円</td><td>24,000円</td><td>+交通費</td></tr>
+            <tr><td>4名</td><td class="price-highlight">60,000円</td><td>32,000円</td><td>+交通費</td></tr>
+            <tr><td>5名</td><td class="price-highlight">75,000円</td><td>40,000円</td><td>+交通費</td></tr>
+            <tr><td>6名</td><td class="price-highlight">90,000円</td><td>48,000円</td><td>+交通費</td></tr>
+            <tr><td>7名</td><td class="price-highlight">105,000円</td><td>56,000円</td><td>+交通費</td></tr>
+            <tr><td>8名</td><td class="price-highlight">120,000円</td><td>64,000円</td><td>+交通費</td></tr>
+            <tr><td>9名</td><td class="price-highlight">135,000円</td><td>72,000円</td><td>+交通費</td></tr>
+            <tr><td>10名以上</td><td class="price-highlight">電話にてご確認ください</td><td>—</td><td>要相談</td></tr>
           </tbody>
         </table>
       </div>
@@ -79,44 +58,20 @@ import Layout from '../../layouts/Layout.astro';
       </div>
       <div class="transport-grid">
         <div class="transport-card">
-          <div class="transport-area">浜松市中心部（中区中心）</div>
+          <div class="transport-area">浜松市街中</div>
           <div class="transport-fee">無料</div>
         </div>
         <div class="transport-card">
-          <div class="transport-area">浜松市内（郊外エリア）</div>
+          <div class="transport-area">浜松市内</div>
           <div class="transport-fee">1,000円/名</div>
         </div>
         <div class="transport-card">
-          <div class="transport-area">湖西市</div>
+          <div class="transport-area">湖西市・磐田市・袋井市・掛川市</div>
           <div class="transport-fee">2,000円/名</div>
-        </div>
-        <div class="transport-card">
-          <div class="transport-area">磐田市</div>
-          <div class="transport-fee">2,000円/名</div>
-        </div>
-        <div class="transport-card">
-          <div class="transport-area">袋井市</div>
-          <div class="transport-fee">2,000円/名</div>
-        </div>
-        <div class="transport-card">
-          <div class="transport-area">掛川市</div>
-          <div class="transport-fee">2,000円/名</div>
-        </div>
-        <div class="transport-card">
-          <div class="transport-area">菊川市</div>
-          <div class="transport-fee">3,000円/名</div>
-        </div>
-        <div class="transport-card">
-          <div class="transport-area">御前崎市</div>
-          <div class="transport-fee">3,000円/名</div>
-        </div>
-        <div class="transport-card">
-          <div class="transport-area">牧之原市・島田市</div>
-          <div class="transport-fee">3,000円/名</div>
         </div>
         <div class="transport-card" style="border-color:var(--pink);">
-          <div class="transport-area">その他エリア</div>
-          <div class="transport-fee">要相談</div>
+          <div class="transport-area">菊川市・御前崎市・牧之原市・島田市</div>
+          <div class="transport-fee">3,000円/名</div>
         </div>
       </div>
     </div>
@@ -138,15 +93,11 @@ import Layout from '../../layouts/Layout.astro';
           </thead>
           <tbody>
             <tr>
-              <td>3日前まで</td>
-              <td>無料</td>
-            </tr>
-            <tr>
-              <td>2日前〜前日</td>
+              <td>3〜2日前</td>
               <td class="price-highlight">50%</td>
             </tr>
             <tr>
-              <td>当日</td>
+              <td>1日前〜当日</td>
               <td class="price-highlight">100%</td>
             </tr>
           </tbody>

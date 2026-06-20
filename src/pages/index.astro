@@ -155,26 +155,15 @@ import Layout from '../layouts/Layout.astro';
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>2名</td>
-              <td class="price-highlight">30,000円〜</td>
-              <td>16,000円</td>
-            </tr>
-            <tr>
-              <td>3名</td>
-              <td class="price-highlight">45,000円〜</td>
-              <td>24,000円</td>
-            </tr>
-            <tr>
-              <td>4名</td>
-              <td class="price-highlight">60,000円〜</td>
-              <td>32,000円</td>
-            </tr>
-            <tr>
-              <td>5名以上</td>
-              <td class="price-highlight">人数×15,000円〜</td>
-              <td>人数×8,000円</td>
-            </tr>
+            <tr><td>2名</td><td class="price-highlight">30,000円</td><td>16,000円</td></tr>
+            <tr><td>3名</td><td class="price-highlight">45,000円</td><td>24,000円</td></tr>
+            <tr><td>4名</td><td class="price-highlight">60,000円</td><td>32,000円</td></tr>
+            <tr><td>5名</td><td class="price-highlight">75,000円</td><td>40,000円</td></tr>
+            <tr><td>6名</td><td class="price-highlight">90,000円</td><td>48,000円</td></tr>
+            <tr><td>7名</td><td class="price-highlight">105,000円</td><td>56,000円</td></tr>
+            <tr><td>8名</td><td class="price-highlight">120,000円</td><td>64,000円</td></tr>
+            <tr><td>9名</td><td class="price-highlight">135,000円</td><td>72,000円</td></tr>
+            <tr><td>10名以上</td><td class="price-highlight">電話にてご確認ください</td><td>—</td></tr>
           </tbody>
         </table>
       </div>
@@ -227,36 +216,20 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="area-grid">
         <div class="area-card">
-          <div class="area-name">浜松市中心部</div>
+          <div class="area-name">浜松市街中</div>
           <div class="area-fee">交通費：無料</div>
         </div>
         <div class="area-card">
-          <div class="area-name">浜松市内（郊外）</div>
-          <div class="area-fee">交通費：1,000円</div>
+          <div class="area-name">浜松市内</div>
+          <div class="area-fee">交通費：1,000円/名</div>
         </div>
         <div class="area-card">
-          <div class="area-name">湖西市・磐田市</div>
-          <div class="area-fee">交通費：2,000円</div>
+          <div class="area-name">湖西市・磐田市・袋井市・掛川市</div>
+          <div class="area-fee">交通費：2,000円/名</div>
         </div>
-        <div class="area-card">
-          <div class="area-name">袋井市・掛川市</div>
-          <div class="area-fee">交通費：2,000円</div>
-        </div>
-        <div class="area-card">
-          <div class="area-name">菊川市・御前崎市</div>
-          <div class="area-fee">交通費：3,000円</div>
-        </div>
-        <div class="area-card">
-          <div class="area-name">牧之原市・島田市</div>
-          <div class="area-fee">交通費：3,000円</div>
-        </div>
-        <div class="area-card">
-          <div class="area-name">その他エリア</div>
-          <div class="area-fee">要相談</div>
-        </div>
-        <div class="area-card" style="border-color:var(--pink);background:#fff;">
-          <div class="area-name" style="color:var(--pink);">出張対応可</div>
-          <div class="area-fee">まずはご相談を！</div>
+        <div class="area-card" style="border-color:var(--pink);">
+          <div class="area-name">菊川市・御前崎市・牧之原市・島田市</div>
+          <div class="area-fee">交通費：3,000円/名</div>
         </div>
       </div>
       <div style="text-align:center;margin-top:24px;">
@@ -271,29 +244,27 @@ import Layout from '../layouts/Layout.astro';
       <div class="section-head">
         <div class="section-tag">FLOW</div>
         <h2 class="section-title">ご利用の<span>流れ</span></h2>
-        <p class="section-lead">かんたん4ステップで予約完了！</p>
       </div>
-      <div class="flow-grid">
-        <div class="flow-card">
-          <div class="flow-num">1</div>
-          <div class="flow-title">お問い合わせ</div>
-          <p class="flow-text">LINE・電話・フォームでお気軽にご連絡ください</p>
-        </div>
-        <div class="flow-card">
-          <div class="flow-num">2</div>
-          <div class="flow-title">ご相談・お見積もり</div>
-          <p class="flow-text">日程・人数・ご予算をもとにご提案します</p>
-        </div>
-        <div class="flow-card">
-          <div class="flow-num">3</div>
-          <div class="flow-title">ご予約確定</div>
-          <p class="flow-text">内容確定後、前日に確認のご連絡をします</p>
-        </div>
-        <div class="flow-card">
-          <div class="flow-num">4</div>
-          <div class="flow-title">当日・おもてなし</div>
-          <p class="flow-text">開始10分前に到着。楽しい時間を♪</p>
-        </div>
+      <div style="max-width:680px;margin:0 auto;">
+        {[
+          { num: 1, title: '利用規約を確認する', desc: 'ご利用前に必ず利用規約をご確認ください。18歳未満の方はご利用いただけません。' },
+          { num: 2, title: '会場に確認する', desc: 'コンパニオンが入店できる会場かどうかを事前に施設に確認してください。' },
+          { num: 3, title: '仮予約をする', desc: '電話・LINE・仮予約フォームにて、ご希望の日時・人数・会場・コース時間をお知らせください。' },
+          { num: 4, title: '24時間以内に確認連絡', desc: 'スタッフの空き状況を確認し、24時間以内にご連絡します。' },
+          { num: 5, title: '前日に最終確認', desc: 'ご予約前日にスタッフより確認のご連絡をします。' },
+          { num: 6, title: '当日・開始10分前に到着', desc: 'スタッフが会場へ伺います。開始時間の10分前を目安にお越しします。' },
+          { num: 7, title: '終了・お会計', desc: '終了時間の30分前に延長される場合はお知らせください。終了後にお会計となります。' },
+        ].map(step => (
+          <div style="display:grid;grid-template-columns:60px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--border);">
+            <div style="text-align:center;padding-top:2px;">
+              <div class="flow-num" style="margin:0 auto;">{step.num}</div>
+            </div>
+            <div>
+              <div class="flow-title">{step.title}</div>
+              <p class="flow-text" style="margin-top:4px;">{step.desc}</p>
+            </div>
+          </div>
+        ))}
       </div>
       <div style="text-align:center;margin-top:28px;">
         <a href="/hajimete/" class="btn-outline">初めての方はこちら</a>
