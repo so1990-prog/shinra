@@ -390,14 +390,13 @@ section { padding: 64px 24px; }
 #ryokin { background: var(--pink-bg); }
 
 .price-table-wrap {
-  overflow-x: auto;
+  overflow-x: visible;
 }
 
 .price-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.88rem;
-  min-width: 500px;
+  font-size: 0.85rem;
 }
 
 .price-table th {
@@ -796,7 +795,7 @@ section { padding: 64px 24px; }
   padding: 10px 14px;
   border: 1px solid var(--border);
   border-radius: 6px;
-  font-size: 0.88rem;
+  font-size: 16px;
   font-family: inherit;
   outline: none;
   transition: border-color 0.2s;
