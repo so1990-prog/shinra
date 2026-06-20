@@ -1,9 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-// Google Apps Script Web App URL
-// デプロイ後に実際のURLに差し替えてください
-const GAS_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+const LINE_URL = 'https://page.line.me/225deoky';
+const TEL = '080-4224-8880';
+const TEL_PLAIN = '08042248880';
 ---
 <Layout
   title="求人情報｜浜松コンパニオン募集【SHINRA】時給4,500円〜・日払い"
@@ -15,20 +15,6 @@ const GAS_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
     <h1>求人情報</h1>
     <p>コンパニオン・送迎ドライバー募集中！</p>
   </div>
-
-  <div id="thanks-msg" style="display:none;background:#e8f5e9;border:2px solid #4caf50;border-radius:12px;padding:24px 20px;max-width:560px;margin:32px auto;text-align:center;">
-    <p style="font-size:1.2rem;font-weight:700;color:#2e7d32;margin-bottom:8px;">✅ 応募を受け付けました！</p>
-    <p style="color:#388e3c;">内容を確認のうえ、3営業日以内にご連絡いたします。</p>
-  </div>
-
-  <script>
-    if (typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('thanks') === '1') {
-      document.addEventListener('DOMContentLoaded', () => {
-        const msg = document.getElementById('thanks-msg');
-        if (msg) { msg.style.display = 'block'; msg.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
-      });
-    }
-  </script>
 
   <!-- コンパニオン -->
   <section>
@@ -85,87 +71,12 @@ const GAS_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
         </div>
       </div>
 
-      <!-- コンパニオン応募 LINE + フォーム -->
-      <div style="margin-top:40px;">
-        <h3 style="font-size:1rem;font-weight:700;text-align:center;margin-bottom:24px;color:var(--dark);">コンパニオンに応募する</h3>
-        <div style="display:flex;gap:12px;justify-content:center;margin-bottom:32px;flex-wrap:wrap;">
-          <a href="https://page.line.me/225deoky" class="btn-line" target="_blank" rel="noopener noreferrer">LINEで応募する</a>
-          <a href="tel:08042248880" class="btn-primary">📞 080-4224-8880</a>
-        </div>
-
-        <div class="inline-form" style="max-width:640px;">
-          <h3>📝 コンパニオン応募フォーム</h3>
-          <form action={GAS_URL} method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="apply_type" value="コンパニオン" />
-
-            <div class="form-row">
-              <label>フルネーム <span class="req">必須</span></label>
-              <input type="text" name="name" placeholder="例：山田 花子" required />
-            </div>
-            <div class="form-row">
-              <label>フリガナ <span class="req">必須</span></label>
-              <input type="text" name="furigana" placeholder="例：ヤマダ ハナコ" required />
-            </div>
-            <div class="form-row">
-              <label>電話番号 <span class="req">必須</span></label>
-              <input type="tel" name="tel" placeholder="090-0000-0000" required />
-            </div>
-            <div class="form-row">
-              <label>メールアドレス <span class="req">必須</span></label>
-              <input type="email" name="email" placeholder="example@gmail.com" required />
-            </div>
-            <div class="form-row">
-              <label>住所 <span class="req">必須</span></label>
-              <input type="text" name="address" placeholder="例：静岡県浜松市中央区〇〇町" required />
-            </div>
-            <div class="form-row">
-              <label>年齢 <span class="req">必須</span></label>
-              <input type="text" name="age" placeholder="例：22歳" required />
-            </div>
-            <div class="form-row">
-              <label>身分証の種類 <span class="req">必須</span></label>
-              <select name="id_type" required>
-                <option value="">選択してください</option>
-                <option value="運転免許証">運転免許証</option>
-                <option value="マイナンバーカード">マイナンバーカード</option>
-                <option value="パスポート">パスポート</option>
-                <option value="その他">その他</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label>コンパニオン経験</label>
-              <select name="experience">
-                <option value="未経験">未経験</option>
-                <option value="あり">あり</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label>飲酒</label>
-              <select name="drink">
-                <option value="飲める">飲める</option>
-                <option value="少し飲める">少し飲める</option>
-                <option value="飲めない">飲めない</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label>連絡希望方法</label>
-              <select name="contact_method">
-                <option value="電話">電話</option>
-                <option value="LINE">LINE</option>
-                <option value="メール">メール</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label>顔写真 <span class="req">必須</span></label>
-              <input type="file" name="photo" accept="image/*" required />
-              <p style="font-size:0.75rem;color:var(--gray-light);margin-top:4px;">JPG・PNG・HEICなど画像ファイルを添付してください</p>
-            </div>
-            <div class="form-row">
-              <label>その他・質問など</label>
-              <textarea name="message" placeholder="ご質問・ご要望などがあればお気軽にどうぞ"></textarea>
-            </div>
-            <button type="submit" class="btn-submit">応募する</button>
-          </form>
+      <div style="margin-top:48px;text-align:center;">
+        <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--dark);">コンパニオンに応募する</h3>
+        <p style="font-size:0.9rem;color:var(--gray-light);margin-bottom:24px;">LINEまたはお電話でお気軽にご連絡ください。顔写真もLINEでお送りいただけます。</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <a href={LINE_URL} class="btn-line" target="_blank" rel="noopener noreferrer">LINEで応募する</a>
+          <a href={`tel:${TEL_PLAIN}`} class="btn-primary">📞 {TEL}</a>
         </div>
       </div>
     </div>
@@ -181,7 +92,7 @@ const GAS_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
       </div>
 
       <div style="max-width:600px;margin:0 auto;">
-        <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:28px;margin-bottom:32px;">
+        <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:28px;margin-bottom:40px;">
           <div class="price-notes">
             <div class="price-note">年齢：18歳以上・車所有・自動車保険加入者</div>
             <div class="price-note">日給：5,000〜10,000円</div>
@@ -190,75 +101,13 @@ const GAS_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
           </div>
         </div>
 
-        <h3 style="font-size:1rem;font-weight:700;text-align:center;margin-bottom:20px;color:var(--dark);">送迎ドライバーに応募する</h3>
-        <div style="display:flex;gap:12px;justify-content:center;margin-bottom:28px;flex-wrap:wrap;">
-          <a href="https://page.line.me/225deoky" class="btn-line" target="_blank" rel="noopener noreferrer">LINEで応募する</a>
-          <a href="tel:08042248880" class="btn-primary">📞 080-4224-8880</a>
-        </div>
-
-        <div class="inline-form">
-          <h3>📝 ドライバー応募フォーム</h3>
-          <form action={GAS_URL} method="POST">
-            <input type="hidden" name="apply_type" value="送迎ドライバー" />
-
-            <div class="form-row">
-              <label>フルネーム <span class="req">必須</span></label>
-              <input type="text" name="name" placeholder="例：山田 太郎" required />
-            </div>
-            <div class="form-row">
-              <label>フリガナ <span class="req">必須</span></label>
-              <input type="text" name="furigana" placeholder="例：ヤマダ タロウ" required />
-            </div>
-            <div class="form-row">
-              <label>電話番号 <span class="req">必須</span></label>
-              <input type="tel" name="tel" placeholder="090-0000-0000" required />
-            </div>
-            <div class="form-row">
-              <label>メールアドレス <span class="req">必須</span></label>
-              <input type="email" name="email" placeholder="example@gmail.com" required />
-            </div>
-            <div class="form-row">
-              <label>住所 <span class="req">必須</span></label>
-              <input type="text" name="address" placeholder="例：静岡県浜松市中央区〇〇町" required />
-            </div>
-            <div class="form-row">
-              <label>年齢 <span class="req">必須</span></label>
-              <input type="text" name="age" placeholder="例：35歳" required />
-            </div>
-            <div class="form-row">
-              <label>身分証の種類 <span class="req">必須</span></label>
-              <select name="id_type" required>
-                <option value="">選択してください</option>
-                <option value="運転免許証">運転免許証</option>
-                <option value="マイナンバーカード">マイナンバーカード</option>
-                <option value="パスポート">パスポート</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label>ドライバー経験</label>
-              <select name="driver_exp">
-                <option value="なし">なし</option>
-                <option value="あり">あり</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label>所有車種</label>
-              <input type="text" name="car" placeholder="例：トヨタ アルファード" />
-            </div>
-            <div class="form-row">
-              <label>連絡希望方法</label>
-              <select name="contact_method">
-                <option value="電話">電話</option>
-                <option value="LINE">LINE</option>
-                <option value="メール">メール</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label>その他・質問など</label>
-              <textarea name="message" placeholder="ご質問・ご要望などがあればお気軽にどうぞ"></textarea>
-            </div>
-            <button type="submit" class="btn-submit">応募する</button>
-          </form>
+        <div style="text-align:center;">
+          <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:var(--dark);">送迎ドライバーに応募する</h3>
+          <p style="font-size:0.9rem;color:var(--gray-light);margin-bottom:24px;">LINEまたはお電話でお気軽にご連絡ください。</p>
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+            <a href={LINE_URL} class="btn-line" target="_blank" rel="noopener noreferrer">LINEで応募する</a>
+            <a href={`tel:${TEL_PLAIN}`} class="btn-primary">📞 {TEL}</a>
+          </div>
         </div>
       </div>
     </div>
