@@ -340,26 +340,26 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="inline-form">
         <h3>📝 仮予約フォーム</h3>
-        <form action="https://formspree.io/f/shinra" method="POST">
+        <form id="top-yoyaku-form">
           <div class="form-row">
             <label>代表者氏名（フルネーム）<span class="req">必須</span></label>
-            <input type="text" name="name" placeholder="例：山田 太郎" required />
+            <input type="text" id="t-name" placeholder="例：山田 太郎" required />
           </div>
           <div class="form-row">
             <label>フリガナ（フルネーム）<span class="req">必須</span></label>
-            <input type="text" name="furigana" placeholder="例：ヤマダ タロウ" required />
+            <input type="text" id="t-furigana" placeholder="例：ヤマダ タロウ" required />
           </div>
           <div class="form-row">
             <label>メールアドレス <span class="req">必須</span></label>
-            <input type="email" name="email" placeholder="example@gmail.com" required />
+            <input type="email" id="t-email" placeholder="example@gmail.com" required />
           </div>
           <div class="form-row">
             <label>連絡先電話番号 <span class="req">必須</span></label>
-            <input type="tel" name="tel" placeholder="例：090-0000-0000" required />
+            <input type="tel" id="t-tel" placeholder="例：090-0000-0000" required />
           </div>
           <div class="form-row">
             <label>コンパニオンご希望人数 <span class="req">必須</span></label>
-            <select name="people" required>
+            <select id="t-people" required>
               <option value="">選択してください</option>
               <option value="2名">2名</option>
               <option value="3名">3名</option>
@@ -374,27 +374,27 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <div class="form-row">
             <label>ご宴会予定日 <span class="req">必須</span></label>
-            <input type="text" name="date" placeholder="例：2024年12月20日（金）" required />
+            <input type="text" id="t-date" placeholder="例：2024年12月20日（金）" required />
           </div>
           <div class="form-row">
             <label>ご宴会開始予定の時間 <span class="req">必須</span></label>
-            <input type="text" name="start_time" placeholder="例：18:00" required />
+            <input type="text" id="t-start_time" placeholder="例：18:00" required />
           </div>
           <div class="form-row">
             <label>ご宴会予定の場所（店名）<span class="req">必須</span></label>
-            <input type="text" name="venue_name" placeholder="例：〇〇料亭" required />
+            <input type="text" id="t-venue_name" placeholder="例：〇〇料亭" required />
           </div>
           <div class="form-row">
             <label>ご宴会予定の場所（住所）<span class="req">必須</span></label>
-            <input type="text" name="venue_address" placeholder="例：浜松市中央区〇〇町1-2-3" required />
+            <input type="text" id="t-venue_address" placeholder="例：浜松市中央区〇〇町1-2-3" required />
           </div>
           <div class="form-row">
             <label>お客様人数や団体名 <span class="req">必須</span></label>
-            <input type="text" name="guests" placeholder="例：20名・〇〇株式会社" required />
+            <input type="text" id="t-guests" placeholder="例：20名・〇〇株式会社" required />
           </div>
           <div class="form-row">
             <label>コンパニオン延長の可能性 <span class="req">必須</span></label>
-            <select name="extension" required>
+            <select id="t-extension" required>
               <option value="">選択してください</option>
               <option value="あり">あり</option>
               <option value="なし">なし</option>
@@ -403,24 +403,52 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <div class="form-row">
             <label>領収書</label>
-            <select name="receipt">
+            <select id="t-receipt">
               <option value="不要">不要</option>
               <option value="必要">必要</option>
             </select>
           </div>
           <div class="form-row">
             <label>領収書宛名</label>
-            <input type="text" name="receipt_name" placeholder="領収書が必要な場合はご記入ください" />
+            <input type="text" id="t-receipt_name" placeholder="領収書が必要な場合はご記入ください" />
           </div>
           <div class="form-row">
             <label>その他お問い合わせ事項</label>
-            <textarea name="message" placeholder="ご要望・ご質問などがあればご記入ください"></textarea>
+            <textarea id="t-message" placeholder="ご要望・ご質問などがあればご記入ください"></textarea>
           </div>
           <p style="font-size:0.75rem;color:var(--gray-light);margin-bottom:16px;line-height:1.8;">
             ※ 携帯メールアドレスでインターネットメール拒否設定をされている方は、ドメイン指定受信で <strong>gmail.com</strong> を許可ドメインに追加してください。
           </p>
           <button type="submit" class="btn-submit">仮予約を送信する</button>
         </form>
+        <script>
+          document.getElementById('top-yoyaku-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const v = id => (document.getElementById(id) || {}).value || '';
+            const body = [
+              '【SHINRA 仮予約】',
+              '',
+              '■ 代表者氏名：' + v('t-name'),
+              '■ フリガナ：' + v('t-furigana'),
+              '■ メール：' + v('t-email'),
+              '■ 電話：' + v('t-tel'),
+              '■ 希望人数：' + v('t-people'),
+              '■ 宴会予定日：' + v('t-date'),
+              '■ 開始時間：' + v('t-start_time'),
+              '■ 会場（店名）：' + v('t-venue_name'),
+              '■ 会場（住所）：' + v('t-venue_address'),
+              '■ お客様人数・団体名：' + v('t-guests'),
+              '■ 延長の可能性：' + v('t-extension'),
+              '■ 領収書：' + v('t-receipt'),
+              '■ 領収書宛名：' + v('t-receipt_name'),
+              '■ その他：' + v('t-message'),
+            ].join('\n');
+            const mailto = 'mailto:shinra.hamamatsu.0101@gmail.com'
+              + '?subject=' + encodeURIComponent('【SHINRA仮予約】' + v('t-name') + ' 様')
+              + '&body=' + encodeURIComponent(body);
+            window.location.href = mailto;
+          });
+        </script>
       </div>
     </div>
   </section>
