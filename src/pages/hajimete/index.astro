@@ -1,0 +1,117 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout
+  title="初めてのお客様へ｜浜松コンパニオン派遣【森羅】"
+  description="浜松コンパニオン派遣・森羅を初めてご利用になる方へ。サービス内容・ご利用方法・注意事項をわかりやすくご説明します。"
+  currentPath="/hajimete/"
+>
+  <div class="page-hero">
+    <div class="breadcrumb"><a href="/">TOP</a> &rsaquo; 初めてのお客様へ</div>
+    <h1>初めてのお客様へ</h1>
+    <p>浜松コンパニオン派遣・森羅を初めてご利用になる方へ</p>
+  </div>
+
+  <section>
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-tag">ABOUT</div>
+        <h2 class="section-title">コンパニオンって<span>どんなサービス？</span></h2>
+      </div>
+      <div class="seo-columns">
+        <div class="seo-text">
+          <h3>コンパニオン派遣とは</h3>
+          <p>コンパニオン派遣とは、宴会・パーティー・懇親会などの場に女性スタッフを派遣するサービスです。お酌をしたり、楽しく会話をしながら場を盛り上げるのがメインのお仕事です。</p>
+          <p>森羅のスタッフは料理のとりわけ・飲み物のおすすめ・場の盛り上げなど、宴会を楽しくする様々なサポートをいたします。</p>
+          <p>「初めてでどうしていいかわからない」という方も多いですが、ご予約からスタッフ派遣まで丁寧にサポートしますのでご安心ください。</p>
+        </div>
+        <div class="seo-text">
+          <h3>こんな場面で使われています</h3>
+          <p>・会社の宴会・忘年会・新年会<br />・歓迎会・送別会・創立記念パーティー<br />・地域の集まり・同窓会・各種お祝い<br />・接待・ゴルフコンペの打ち上げ</p>
+          <p>人数・予算・会場の雰囲気に合わせて最適なスタッフをご提案しますので、まずはお気軽にご相談ください。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--pink-bg);">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-tag">FLOW</div>
+        <h2 class="section-title">ご利用の<span>流れ</span></h2>
+      </div>
+      <div style="max-width:680px;margin:0 auto;">
+        <div class="flow-steps-vertical">
+          {[
+            { num: 1, title: '利用規約を確認する', desc: 'ご利用前に必ず利用規約をご確認ください。18歳未満の方はご利用いただけません。' },
+            { num: 2, title: '会場に確認する', desc: 'コンパニオンが入店できる会場かどうかを事前に施設に確認してください。わからない場合はご相談ください。' },
+            { num: 3, title: '仮予約をする', desc: '電話・LINE・仮予約フォームにて、ご希望の日時・人数・会場・コース時間をお知らせください。' },
+            { num: 4, title: '24時間以内に確認連絡', desc: 'スタッフの空き状況を確認し、24時間以内にご連絡します。' },
+            { num: 5, title: '前日に最終確認', desc: 'ご予約前日にスタッフより確認のご連絡をします。' },
+            { num: 6, title: '当日・開始10分前に到着', desc: 'スタッフが会場へ伺います。開始時間の10分前を目安にお越しします。' },
+            { num: 7, title: '終了・お会計', desc: '終了時間の30分前に延長される場合はお知らせください。終了後にお会計となります。' },
+          ].map(step => (
+            <div style="display:grid;grid-template-columns:56px 1fr;gap:16px;padding:24px 0;border-bottom:1px solid var(--border);">
+              <div style="text-align:center;">
+                <div class="flow-num" style="margin:0 auto;">{step.num}</div>
+              </div>
+              <div>
+                <div class="flow-title">{step.title}</div>
+                <p class="flow-text" style="margin-top:4px;">{step.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-tag">NOTES</div>
+        <h2 class="section-title">ご利用時の<span>注意事項</span></h2>
+      </div>
+      <div style="max-width:680px;margin:0 auto;">
+        <div class="price-notes">
+          <div class="price-note">ピンクコンパニオンと相席の派遣は行っておりません</div>
+          <div class="price-note">自宅・ラブホテル等への派遣は一切お断りしています</div>
+          <div class="price-note">スタッフが嫌がる行為があった場合、即時精算・退出させていただきます</div>
+          <div class="price-note">18歳未満の方はご利用いただけません</div>
+          <div class="price-note">会場には事前にコンパニオン入店可能か確認をお願いします</div>
+          <div class="price-note">終了時間の30分前に延長の有無をお知らせください</div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:32px;">
+        <a href="/yoyaku/" class="btn-primary">仮予約フォームへ</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--pink-bg);">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-tag">FAQ</div>
+        <h2 class="section-title">初めての方への<span>よくある質問</span></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">コンパニオンって何をしてくれるの？</div>
+          <div class="faq-a">お酌・会話・場の盛り上げがメインです。料理のとりわけ・飲み物のご提案なども行います。あくまでも健全なサービスです。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">どんな会場でも呼べますか？</div>
+          <div class="faq-a">コンパニオンが入店できない会場もあります。事前に施設にご確認いただくか、森羅にご相談いただければサポートします。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">1人でも予約できますか？</div>
+          <div class="faq-a">はい、コンパニオン1名様からご予約いただけます。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">当日キャンセルはできますか？</div>
+          <div class="faq-a">キャンセルポリシーについてはご予約時にご説明します。前日・当日のキャンセルはキャンセル料が発生する場合があります。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

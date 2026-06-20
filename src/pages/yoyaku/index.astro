@@ -1,0 +1,110 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout
+  title="仮予約フォーム｜浜松コンパニオン派遣【森羅】"
+  description="浜松コンパニオン派遣・森羅の仮予約フォーム。ご希望の日時・人数・エリアをご記入ください。24時間以内にご連絡します。"
+  currentPath="/yoyaku/"
+>
+  <div class="page-hero">
+    <div class="breadcrumb"><a href="/">TOP</a> &rsaquo; 仮予約フォーム</div>
+    <h1>仮予約フォーム</h1>
+    <p>内容確認後、24時間以内にご連絡します</p>
+  </div>
+
+  <section>
+    <div class="section-inner">
+      <div style="text-align:center;margin-bottom:32px;">
+        <p style="font-size:0.88rem;color:var(--gray);line-height:2;">
+          お急ぎの場合は<strong>電話（080-4224-8880）</strong>または<strong>LINE</strong>でご連絡ください。<br />
+          フォームからのご予約は24時間以内に確認のご連絡をします。
+        </p>
+        <div style="display:flex;gap:12px;justify-content:center;margin-top:16px;flex-wrap:wrap;">
+          <a href="tel:08042248880" class="btn-primary">📞 今すぐ電話する</a>
+          <a href="https://page.line.me/225deoky" class="btn-line" target="_blank" rel="noopener noreferrer">LINEで相談する</a>
+        </div>
+      </div>
+
+      <div class="inline-form" style="max-width:700px;">
+        <h3>📝 仮予約フォーム</h3>
+        <form action="https://formspree.io/f/shinra" method="POST">
+          <div class="form-row">
+            <label>お名前 <span class="req">必須</span></label>
+            <input type="text" name="name" placeholder="山田 太郎" required />
+          </div>
+          <div class="form-row">
+            <label>電話番号 <span class="req">必須</span></label>
+            <input type="tel" name="tel" placeholder="090-0000-0000" required />
+          </div>
+          <div class="form-row">
+            <label>メールアドレス</label>
+            <input type="email" name="email" placeholder="example@mail.com" />
+          </div>
+          <div class="form-row">
+            <label>ご希望日時 <span class="req">必須</span></label>
+            <input type="text" name="date" placeholder="例：2024年12月20日（金）18:00〜" required />
+          </div>
+          <div class="form-row">
+            <label>ご希望コンパニオン人数 <span class="req">必須</span></label>
+            <select name="people" required>
+              <option value="">選択してください</option>
+              <option value="1名">1名</option>
+              <option value="2名">2名</option>
+              <option value="3名">3名</option>
+              <option value="4名">4名</option>
+              <option value="5名">5名</option>
+              <option value="6名以上">6名以上</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>ご希望コース時間 <span class="req">必須</span></label>
+            <select name="course" required>
+              <option value="">選択してください</option>
+              <option value="2時間">2時間（基本コース）</option>
+              <option value="3時間">3時間</option>
+              <option value="4時間以上">4時間以上</option>
+              <option value="未定">未定（相談したい）</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>会場名・エリア <span class="req">必須</span></label>
+            <input type="text" name="venue" placeholder="例：浜松市中区 〇〇料亭 / 磐田市" required />
+          </div>
+          <div class="form-row">
+            <label>ご参加人数（お客様側）</label>
+            <input type="text" name="guests" placeholder="例：10名程度" />
+          </div>
+          <div class="form-row">
+            <label>連絡希望方法</label>
+            <select name="contact_method">
+              <option value="電話">電話</option>
+              <option value="LINE">LINE</option>
+              <option value="メール">メール</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>ご要望・ご質問</label>
+            <textarea name="message" placeholder="指名希望・雰囲気のご希望・その他ご要望がありましたらご記入ください"></textarea>
+          </div>
+          <button type="submit" class="btn-submit">仮予約を送信する</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--pink-bg);">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-tag">NOTES</div>
+        <h2 class="section-title">ご予約時の<span>注意事項</span></h2>
+      </div>
+      <div class="price-notes" style="max-width:640px;margin:0 auto;">
+        <div class="price-note">仮予約後、24時間以内にご連絡します。お急ぎの場合はお電話ください</div>
+        <div class="price-note">会場はコンパニオン入店可能な場所のみ対応します</div>
+        <div class="price-note">ピンクコンパニオンのご依頼はお受けできません</div>
+        <div class="price-note">前日に最終確認のご連絡をさせていただきます</div>
+        <div class="price-note">キャンセルは3日前まで無料。前日50%・当日100%のキャンセル料が発生します</div>
+      </div>
+    </div>
+  </section>
+</Layout>

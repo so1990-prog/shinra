@@ -1,219 +1,377 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout>
-  <!-- HEADER -->
-  <header>
-    <div class="logo">
-      森羅
-      <span>SHINRA COMPANION / HAMAMATSU</span>
-    </div>
-    <nav>
-      <a href="#gallery">フォトギャラリー</a>
-      <a href="#about">森羅について</a>
-      <a href="#flow">ご利用の流れ</a>
-      <a href="#faq">よくある質問</a>
-      <a href="#contact">お問い合わせ</a>
-    </nav>
-  </header>
+<Layout currentPath="/">
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <p class="hero-label">Hamamatsu Premium Companion</p>
-      <h1>
-        浜松で選ばれる<br />
-        <em>上質なおもてなし</em>
-      </h1>
-      <p class="hero-sub">宴会・パーティー・各種イベントに対応</p>
-      <a href="#contact" class="hero-cta">無料相談・お問い合わせ</a>
+    <div class="hero-badge">✨ 業界15年以上・静岡県西部No.1優良店</div>
+    <h1>
+      浜松の<span>コンパニオン派遣</span>なら<br />
+      森羅にお任せください！
+    </h1>
+    <p class="hero-sub">
+      宴会・懇親会・パーティー・企業イベントに対応。<br />
+      明るくて気さくな女の子が盛り上げます♪<br />
+      <strong>1名15,000円〜・当日相談OK・追加料金なし</strong>
+    </p>
+    <div class="hero-btns">
+      <a href="https://page.line.me/225deoky" class="btn-line" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:20px;height:20px;fill:#fff;"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+        LINEで無料相談
+      </a>
+      <a href="tel:08042248880" class="btn-primary">📞 080-4224-8880</a>
+      <a href="/yoyaku/" class="btn-outline">仮予約フォーム</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">15年</div>
+        <div class="hero-stat-label">業界実績</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">150名</div>
+        <div class="hero-stat-label">在籍スタッフ数</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">1名〜</div>
+        <div class="hero-stat-label">少人数から対応</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">9市</div>
+        <div class="hero-stat-label">対応エリア</div>
+      </div>
     </div>
   </section>
+
+  <!-- APPEAL BAR -->
+  <div class="appeal-bar">
+    <div class="appeal-bar-inner">
+      <div class="appeal-item">
+        <div class="appeal-icon">💰</div>
+        <div class="appeal-title">明朗会計・追加料金なし</div>
+      </div>
+      <div class="appeal-item">
+        <div class="appeal-icon">⏰</div>
+        <div class="appeal-title">当日相談OK</div>
+      </div>
+      <div class="appeal-item">
+        <div class="appeal-icon">👧</div>
+        <div class="appeal-title">在籍150名超</div>
+      </div>
+      <div class="appeal-item">
+        <div class="appeal-icon">📍</div>
+        <div class="appeal-title">浜松市内〜静岡西部対応</div>
+      </div>
+    </div>
+  </div>
 
   <!-- GALLERY -->
   <section id="gallery">
-    <div class="gallery-inner">
-      <div class="gallery-header">
-        <p class="section-label">Photo Gallery</p>
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-tag">STAFF PHOTO</div>
         <h2 class="section-title">スタッフ紹介</h2>
-        <div class="divider" style="margin: 24px auto;"></div>
         <p class="section-lead">
-          明るく・上品で・気さくなスタッフが揃っております。<br />
-          大切な場を共に盛り上げるパートナーをお選びください。
+          OL・大学生・看護師など幅広い職種の20〜30代前半の女の子が在籍。<br />
+          明るくて気さくなスタッフが宴会を盛り上げます♪
         </p>
       </div>
       <div class="gallery-grid">
-        <div class="gallery-item large">
-          <img src="/images/girl4.jpg" alt="浜松コンパニオン スタッフ" loading="lazy" />
+        <div class="gallery-item wide">
+          <img src="/images/girl4.jpg" alt="浜松コンパニオン 森羅スタッフ" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="/images/girl1.jpg" alt="浜松コンパニオン スタッフ" loading="lazy" />
+          <img src="/images/girl1.jpg" alt="浜松コンパニオン 森羅スタッフ" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="/images/girl2.jpg" alt="浜松コンパニオン スタッフ" loading="lazy" />
+          <img src="/images/girl2.jpg" alt="浜松コンパニオン 森羅スタッフ" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="/images/girl3.jpg" alt="浜松コンパニオン スタッフ" loading="lazy" />
+          <img src="/images/girl3.jpg" alt="浜松コンパニオン 森羅スタッフ" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="/images/girl5.jpg" alt="浜松コンパニオン スタッフ" loading="lazy" />
+          <img src="/images/girl5.jpg" alt="浜松コンパニオン 森羅スタッフ" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="/images/girl6.jpg" alt="浜松コンパニオン スタッフ" loading="lazy" />
+          <img src="/images/girl6.jpg" alt="浜松コンパニオン 森羅スタッフ" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="/images/girl7.jpg" alt="浜松コンパニオン スタッフ" loading="lazy" />
+          <img src="/images/girl7.jpg" alt="浜松コンパニオン 森羅スタッフ" loading="lazy" />
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="about-inner">
-      <div class="about-text">
-        <p class="section-label">About</p>
-        <h2 class="section-title">森羅について</h2>
-        <div class="divider"></div>
-        <p>
-          森羅は浜松を中心に活動するコンパニオン派遣サービスです。
-          宴会・パーティー・各種イベントに、明るく上品なスタッフを派遣いたします。
-        </p>
-        <p>
-          お客様に心から楽しんでいただけるよう、スタッフ一同丁寧な対応を心がけております。
-          初めてのご利用の方も、お気軽にご相談ください。
-        </p>
-        <p>
-          浜松市内はもちろん、周辺エリアへの出張も承っております。
-          まずはお電話またはLINEにてお気軽にお問い合わせください。
-        </p>
-      </div>
-      <div class="about-image">
-        <img src="/images/girl5.jpg" alt="森羅 浜松コンパニオン" />
+      <div style="text-align:center;margin-top:28px;">
+        <a href="/yoyaku/" class="btn-primary">このスタッフを予約する</a>
       </div>
     </div>
   </section>
 
   <!-- FEATURES -->
   <section id="features">
-    <div class="features-inner">
-      <div class="features-header">
-        <p class="section-label">Features</p>
-        <h2 class="section-title">森羅が選ばれる理由</h2>
-        <div class="divider" style="margin: 24px auto;"></div>
-        <p class="section-lead">
-          お客様に安心してご利用いただけるよう、<br />3つのこだわりをお約束します。
-        </p>
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-tag">FEATURES</div>
+        <h2 class="section-title">森羅が<span>選ばれる理由</span></h2>
+        <p class="section-lead">お客様に安心してご利用いただける5つのポイント</p>
       </div>
       <div class="features-grid">
-        <div class="feature-item">
-          <div class="feature-num">01</div>
-          <div class="feature-title">厳選されたスタッフ</div>
-          <p class="feature-text">
-            容姿・マナー・コミュニケーション力を兼ね備えたスタッフのみを厳選採用。
-            大切なお席に最適な人材をご提案します。
-          </p>
+        <div class="feature-card">
+          <div class="feature-icon">🏆</div>
+          <div class="feature-title">業界15年以上の実績</div>
+          <p class="feature-text">静岡県西部No.1優良店としてお客様に支持されてきた長年の実績。安心してお任せください。</p>
         </div>
-        <div class="feature-item">
-          <div class="feature-num">02</div>
-          <div class="feature-title">丁寧なヒアリング</div>
-          <p class="feature-text">
-            ご要望・人数・予算・雰囲気など、事前にしっかりお伺いします。
-            初めてのご利用でも安心してお任せください。
-          </p>
+        <div class="feature-card">
+          <div class="feature-icon">👧</div>
+          <div class="feature-title">在籍150名超の豊富な人材</div>
+          <p class="feature-text">OL・大学生・看護師など多様な職種の女の子が在籍。ご要望に合ったスタッフをご提案します。</p>
         </div>
-        <div class="feature-item">
-          <div class="feature-num">03</div>
-          <div class="feature-title">明確な料金体系</div>
-          <p class="feature-text">
-            追加料金なし・明朗会計でご安心いただけます。
-            お見積もりは無料ですので、お気軽にお問い合わせください。
-          </p>
+        <div class="feature-card">
+          <div class="feature-icon">💴</div>
+          <div class="feature-title">わかりやすい料金システム</div>
+          <p class="feature-text">1名15,000円/2時間〜の明朗会計。追加料金なし・お見積もり無料です。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📍</div>
+          <div class="feature-title">浜松市内〜静岡西部全域対応</div>
+          <p class="feature-text">浜松市はもちろん、磐田・袋井・掛川・菊川・湖西など静岡県西部全域に対応しています。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📞</div>
+          <div class="feature-title">当日・急な相談もOK</div>
+          <p class="feature-text">急なご依頼にも可能な限り対応。まずはお気軽にLINEまたはお電話でご相談ください♪</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <div class="feature-title">安心・安全なサービス</div>
+          <p class="feature-text">ピンクコンパニオンは一切なし。スタッフの安全を守り、お客様にも安心してご利用いただけます。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FLOW -->
-  <section id="flow">
-    <div class="flow-header">
-      <p class="section-label">Flow</p>
-      <h2 class="section-title">ご利用の流れ</h2>
-      <div class="divider" style="margin: 24px auto;"></div>
+  <!-- PRICE (summary) -->
+  <section id="ryokin" style="background:var(--pink-bg);">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-tag">PRICE</div>
+        <h2 class="section-title">料金システム<span>（概要）</span></h2>
+        <p class="section-lead">追加料金なし・明朗会計でご安心ください</p>
+      </div>
+      <div class="price-table-wrap">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>人数</th>
+              <th>2時間コース（基本）</th>
+              <th>延長1時間</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1名</td>
+              <td class="price-highlight">15,000円〜</td>
+              <td>8,000円</td>
+            </tr>
+            <tr>
+              <td>2名</td>
+              <td class="price-highlight">30,000円〜</td>
+              <td>16,000円</td>
+            </tr>
+            <tr>
+              <td>3名</td>
+              <td class="price-highlight">45,000円〜</td>
+              <td>24,000円</td>
+            </tr>
+            <tr>
+              <td>4名</td>
+              <td class="price-highlight">60,000円〜</td>
+              <td>32,000円</td>
+            </tr>
+            <tr>
+              <td>5名以上</td>
+              <td class="price-highlight">人数×15,000円〜</td>
+              <td>人数×8,000円</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="price-notes">
+        <div class="price-note">指名料：1,000円/名</div>
+        <div class="price-note">交通費：浜松市中心部は無料。市内1,000円、周辺市町村2,000〜3,000円</div>
+        <div class="price-note">繁忙期（10月〜1月）：キャスト1名・1時間あたり500円UP</div>
+      </div>
+      <div style="text-align:center;margin-top:28px;">
+        <a href="/ryokin/" class="btn-outline">詳しい料金を見る</a>
+      </div>
     </div>
-    <div class="flow-steps">
-      <div class="flow-step">
-        <div class="flow-num">STEP<br />01</div>
-        <div>
+  </section>
+
+  <!-- VOICE -->
+  <section id="voice">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-tag">VOICE</div>
+        <h2 class="section-title">お客様の<span>声</span></h2>
+      </div>
+      <div class="voice-grid">
+        <div class="voice-card">
+          <p class="voice-text">女の子のレベルが本当に高くてびっくりしました！宴会が何倍も盛り上がって大満足です。また絶対使います！</p>
+          <div class="voice-from">— 浜松市・会社宴会でご利用</div>
+        </div>
+        <div class="voice-card">
+          <p class="voice-text">初めてコンパニオンを頼んだのですが、丁寧に説明してもらえて安心できました。スタッフの子もとても気さくで楽しかったです♪</p>
+          <div class="voice-from">— 磐田市・懇親会でご利用</div>
+        </div>
+        <div class="voice-card">
+          <p class="voice-text">急な依頼にも関わらず対応してもらえました。料金も明確でわかりやすく、安心して利用できました。</p>
+          <div class="voice-from">— 袋井市・パーティーでご利用</div>
+        </div>
+        <div class="voice-card">
+          <p class="voice-text">15年以上の実績があるだけあって、対応がとてもプロフェッショナル。毎年お願いしています！</p>
+          <div class="voice-from">— 浜松市・毎年ご利用</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREA -->
+  <section id="area">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-tag">SERVICE AREA</div>
+        <h2 class="section-title">対応<span>エリア</span></h2>
+        <p class="section-lead">浜松市内はもちろん、静岡県西部全域に対応しています</p>
+      </div>
+      <div class="area-grid">
+        <div class="area-card">
+          <div class="area-name">浜松市中心部</div>
+          <div class="area-fee">交通費：無料</div>
+        </div>
+        <div class="area-card">
+          <div class="area-name">浜松市内（郊外）</div>
+          <div class="area-fee">交通費：1,000円</div>
+        </div>
+        <div class="area-card">
+          <div class="area-name">湖西市・磐田市</div>
+          <div class="area-fee">交通費：2,000円</div>
+        </div>
+        <div class="area-card">
+          <div class="area-name">袋井市・掛川市</div>
+          <div class="area-fee">交通費：2,000円</div>
+        </div>
+        <div class="area-card">
+          <div class="area-name">菊川市・御前崎市</div>
+          <div class="area-fee">交通費：3,000円</div>
+        </div>
+        <div class="area-card">
+          <div class="area-name">牧之原市・島田市</div>
+          <div class="area-fee">交通費：3,000円</div>
+        </div>
+        <div class="area-card">
+          <div class="area-name">その他エリア</div>
+          <div class="area-fee">要相談</div>
+        </div>
+        <div class="area-card" style="border-color:var(--pink);background:#fff;">
+          <div class="area-name" style="color:var(--pink);">出張対応可</div>
+          <div class="area-fee">まずはご相談を！</div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:24px;">
+        <a href="/area/" class="btn-outline">エリア詳細を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOW -->
+  <section id="flow" style="background:var(--pink-bg);">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-tag">FLOW</div>
+        <h2 class="section-title">ご利用の<span>流れ</span></h2>
+        <p class="section-lead">かんたん4ステップで予約完了！</p>
+      </div>
+      <div class="flow-grid">
+        <div class="flow-card">
+          <div class="flow-num">1</div>
           <div class="flow-title">お問い合わせ</div>
-          <p class="flow-desc">
-            お電話またはLINEにてご連絡ください。日程・人数・ご予算などをお聞かせいただければスムーズです。
-          </p>
+          <p class="flow-text">LINE・電話・フォームでお気軽にご連絡ください</p>
         </div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num">STEP<br />02</div>
-        <div>
+        <div class="flow-card">
+          <div class="flow-num">2</div>
           <div class="flow-title">ご相談・お見積もり</div>
-          <p class="flow-desc">
-            ご希望の内容をもとに最適なプランをご提案。料金・スタッフ人数・当日の流れについてご説明します。
-          </p>
+          <p class="flow-text">日程・人数・ご予算をもとにご提案します</p>
         </div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num">STEP<br />03</div>
-        <div>
+        <div class="flow-card">
+          <div class="flow-num">3</div>
           <div class="flow-title">ご予約確定</div>
-          <p class="flow-desc">
-            内容にご納得いただければご予約確定。前日に確認のご連絡を差し上げます。
-          </p>
+          <p class="flow-text">内容確定後、前日に確認のご連絡をします</p>
+        </div>
+        <div class="flow-card">
+          <div class="flow-num">4</div>
+          <div class="flow-title">当日・おもてなし</div>
+          <p class="flow-text">開始10分前に到着。楽しい時間を♪</p>
         </div>
       </div>
-      <div class="flow-step">
-        <div class="flow-num">STEP<br />04</div>
-        <div>
-          <div class="flow-title">当日・おもてなし</div>
-          <p class="flow-desc">
-            スタッフが会場へ伺い、お席を盛り上げます。終了後にお会計となります。
-          </p>
-        </div>
+      <div style="text-align:center;margin-top:28px;">
+        <a href="/hajimete/" class="btn-outline">初めての方はこちら</a>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
   <section id="faq">
-    <div class="faq-inner">
-      <div class="faq-header">
-        <p class="section-label">FAQ</p>
-        <h2 class="section-title">よくある質問</h2>
-        <div class="divider" style="margin: 24px auto;"></div>
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-tag">FAQ</div>
+        <h2 class="section-title">よくある<span>ご質問</span></h2>
       </div>
       <div class="faq-list">
         <div class="faq-item">
-          <div class="faq-q">初めてでも依頼できますか？</div>
-          <div class="faq-a">もちろんです。初めてのご利用の方でも丁寧にご説明しますので、お気軽にご連絡ください。</div>
+          <div class="faq-q">浜松でコンパニオンを初めて頼むのですが大丈夫ですか？</div>
+          <div class="faq-a">もちろんです！初めての方でも丁寧にご説明しますので安心してお任せください。まずはLINEでお気軽にご相談ください♪</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">浜松市のどのエリアでも対応できますか？</div>
+          <div class="faq-a">浜松市内全域に対応しています。中心部は交通費無料、郊外エリアは1,000円です。磐田・袋井・掛川などの周辺市町村も対応しています。</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">何名から依頼できますか？</div>
-          <div class="faq-a">1名様から承っております。人数に応じてご提案いたします。</div>
+          <div class="faq-a">1名様からご対応しています。コンパニオン1名から予約可能です。</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">浜松市外でも対応していただけますか？</div>
-          <div class="faq-a">はい、静岡県内を中心に周辺エリアへの出張も承っております。遠方の場合は交通費が別途かかる場合がございます。</div>
+          <div class="faq-q">浜松コンパニオンの料金はいくらですか？</div>
+          <div class="faq-a">2時間コースで1名15,000円〜です。指名料1,000円・延長1時間8,000円。追加料金は一切いただきません。</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">どんなイベントに対応していますか？</div>
-          <div class="faq-a">宴会・懇親会・パーティー・企業イベント・各種お祝いの席など、幅広くご対応いたします。</div>
+          <div class="faq-q">当日の急な依頼は可能ですか？</div>
+          <div class="faq-a">可能な限り対応します。まずはお電話またはLINEでご連絡ください。</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">料金を教えてください。</div>
-          <div class="faq-a">内容によって異なるため、まずはお問い合わせください。無料でお見積もりいたします。追加料金は一切ございません。</div>
+          <div class="faq-q">ピンクコンパニオンはありますか？</div>
+          <div class="faq-a">ピンクコンパニオンのご提供は一切行っておりません。安心・安全なサービスをご提供しています。</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">当日キャンセルはできますか？</div>
-          <div class="faq-a">キャンセルポリシーについてはご予約時にご説明いたします。なるべく早めにご連絡いただけますと幸いです。</div>
+          <div class="faq-q">どんな宴会に対応していますか？</div>
+          <div class="faq-a">会社宴会・懇親会・忘年会・新年会・歓送迎会・パーティー・各種お祝いの席など幅広く対応しています。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO CONTENT -->
+  <section class="seo-section" style="padding:64px 24px;">
+    <div class="section-inner">
+      <div class="seo-columns">
+        <div class="seo-text">
+          <h3>浜松市のコンパニオン派遣について</h3>
+          <p>浜松市は静岡県最大の都市であり、企業の宴会・懇親会・各種パーティーが盛んに行われています。森羅は浜松市を中心に業界15年以上の実績を持つコンパニオン派遣サービスです。</p>
+          <p>浜松市内の居酒屋・料亭・ホテル宴会場など、あらゆる会場へスタッフを派遣いたします。会場への確認が必要な場合はサポートしますのでお気軽にご相談ください。</p>
+          <p>浜松駅周辺・中区・東区・西区・南区・北区・浜北区・天竜区など浜松市内全域に対応しています。</p>
+        </div>
+        <div class="seo-text">
+          <h3>浜松コンパニオンの選び方</h3>
+          <p>コンパニオン派遣を初めてご利用になる場合、「料金が明確か」「実績があるか」「スタッフの質が高いか」の3点が重要です。</p>
+          <p>森羅は料金を事前に明示し、追加料金は一切いただきません。15年以上の実績と150名超の在籍スタッフ数が信頼の証です。</p>
+          <p>浜松で宴会コンパニオンをお探しなら、まずは森羅へお気軽にご相談ください。無料でお見積もりいたします。</p>
         </div>
       </div>
     </div>
@@ -221,42 +379,66 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- CONTACT -->
   <section id="contact">
-    <div class="contact-inner">
-      <p class="section-label">Contact</p>
-      <h2 class="section-title">お問い合わせ</h2>
-      <div class="divider" style="margin: 24px auto;"></div>
-      <p class="contact-lead">
-        ご予約・ご相談はお電話またはLINEにてお気軽にどうぞ。<br />
-        お見積もりは無料です。まずはお気軽にお問い合わせください。
-      </p>
-      <div class="contact-tel">📞 お問い合わせはLINEから</div>
-      <p class="contact-time">受付時間 10:00〜22:00</p>
-      <a href="https://lin.ee/XXXXXXX" class="btn-line" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px;fill:#fff;">
-          <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
-        </svg>
-        LINEで無料相談する
-      </a>
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-tag">CONTACT</div>
+        <h2 class="section-title">お気軽に<span>ご相談ください</span></h2>
+        <p class="section-lead">LINEが一番スムーズです！お見積もり無料♪</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-card-title">📞 お電話でのご相談</div>
+          <a href="tel:08042248880" class="contact-tel-num">080-4224-8880</a>
+          <p class="contact-time">受付時間：10:00〜22:00（年中無休）</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-title">💬 LINEでのご相談</div>
+          <a href="https://page.line.me/225deoky" class="btn-line" target="_blank" rel="noopener noreferrer" style="margin:0 auto;display:inline-flex;">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:20px;height:20px;fill:#fff;"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+            LINEを開く
+          </a>
+          <p class="contact-time">24時間メッセージ受付</p>
+        </div>
+      </div>
+      <!-- インラインフォーム -->
+      <div class="inline-form">
+        <h3>📝 仮予約・お問い合わせフォーム</h3>
+        <form action="https://formspree.io/f/shinra" method="POST">
+          <div class="form-row">
+            <label>お名前 <span class="req">必須</span></label>
+            <input type="text" name="name" placeholder="山田 太郎" required />
+          </div>
+          <div class="form-row">
+            <label>電話番号 <span class="req">必須</span></label>
+            <input type="tel" name="tel" placeholder="090-0000-0000" required />
+          </div>
+          <div class="form-row">
+            <label>ご希望日時 <span class="req">必須</span></label>
+            <input type="text" name="date" placeholder="例：2024年12月1日 18:00〜" required />
+          </div>
+          <div class="form-row">
+            <label>ご希望人数</label>
+            <select name="people">
+              <option value="">選択してください</option>
+              <option value="1名">1名</option>
+              <option value="2名">2名</option>
+              <option value="3名">3名</option>
+              <option value="4名">4名</option>
+              <option value="5名以上">5名以上</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>会場・エリア</label>
+            <input type="text" name="venue" placeholder="例：浜松市中区 〇〇料亭" />
+          </div>
+          <div class="form-row">
+            <label>ご要望・ご質問</label>
+            <textarea name="message" placeholder="お気軽にご記入ください"></textarea>
+          </div>
+          <button type="submit" class="btn-submit">送信する</button>
+        </form>
+      </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-logo">森羅</div>
-    <p class="footer-address">
-      浜松市｜コンパニオン派遣サービス<br />
-      受付時間：10:00〜22:00
-    </p>
-    <p class="footer-copy">&copy; 2024 森羅 All Rights Reserved.</p>
-  </footer>
-
-  <!-- LINE FLOAT BUTTON -->
-  <div class="line-float">
-    <a href="https://lin.ee/XXXXXXX" target="_blank" rel="noopener noreferrer" aria-label="LINEでお問い合わせ">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
-      </svg>
-    </a>
-    <span class="line-float-label">LINE相談</span>
-  </div>
 </Layout>

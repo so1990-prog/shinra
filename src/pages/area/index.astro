@@ -1,0 +1,75 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout
+  title="対応エリア｜浜松コンパニオン派遣【森羅】浜松・磐田・袋井・掛川など静岡西部"
+  description="浜松コンパニオン派遣・森羅の対応エリア。浜松市内はもちろん、磐田市・袋井市・掛川市・菊川市・湖西市・御前崎市・牧之原市・島田市など静岡県西部全域に対応。"
+  currentPath="/area/"
+>
+  <div class="page-hero">
+    <div class="breadcrumb"><a href="/">TOP</a> &rsaquo; 対応エリア</div>
+    <h1>対応エリア</h1>
+    <p>浜松市内・静岡県西部全域でコンパニオンを派遣します</p>
+  </div>
+
+  <section>
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-tag">SERVICE AREA</div>
+        <h2 class="section-title">浜松市・静岡西部<span>全域対応</span></h2>
+        <p class="section-lead">
+          浜松市内はもちろん、磐田・袋井・掛川・菊川・湖西など静岡県西部の広いエリアに対応しています。<br />
+          記載のないエリアもお気軽にご相談ください。
+        </p>
+      </div>
+      <div class="area-grid" style="grid-template-columns:repeat(3,1fr);">
+        {[
+          { area: '浜松市中心部', sub: '中区中心部', fee: '交通費：無料' },
+          { area: '浜松市内（郊外）', sub: '東区・西区・南区・北区・浜北区・天竜区など', fee: '交通費：1,000円/名' },
+          { area: '湖西市', sub: '新居町・鷲津・白須賀など', fee: '交通費：2,000円/名' },
+          { area: '磐田市', sub: '磐田・豊田・竜洋・福田など', fee: '交通費：2,000円/名' },
+          { area: '袋井市', sub: '袋井・浅羽など', fee: '交通費：2,000円/名' },
+          { area: '掛川市', sub: '掛川・大東・大須賀など', fee: '交通費：2,000円/名' },
+          { area: '菊川市', sub: '菊川・小笠など', fee: '交通費：3,000円/名' },
+          { area: '御前崎市', sub: '御前崎・浜岡など', fee: '交通費：3,000円/名' },
+          { area: '牧之原市・島田市', sub: '牧之原・島田・吉田など', fee: '交通費：3,000円/名' },
+        ].map(item => (
+          <div class="area-card" style="text-align:left;padding:20px;">
+            <div class="area-name">{item.area}</div>
+            <div style="font-size:0.73rem;color:var(--gray-light);margin:4px 0;">{item.sub}</div>
+            <div class="area-fee">{item.fee}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--pink-bg);">
+    <div class="section-inner">
+      <div class="seo-columns">
+        <div class="seo-text">
+          <h3>浜松市でのコンパニオン派遣</h3>
+          <p>浜松市は静岡県最大の都市。中区・東区・西区・南区・北区・浜北区・天竜区の各エリアへ対応しています。浜松駅周辺の料亭・ホテル宴会場・居酒屋など、様々な会場へ派遣実績があります。</p>
+          <p>浜松市中心部（中区中心部）への派遣は交通費無料。郊外エリアは1,000円/名です。</p>
+        </div>
+        <div class="seo-text">
+          <h3>浜松周辺市町村への対応</h3>
+          <p>磐田市・袋井市・掛川市・湖西市は交通費2,000円/名。菊川市・御前崎市・牧之原市・島田市は3,000円/名でご対応しています。</p>
+          <p>その他のエリアも可能な限り対応しますので、まずはお気軽にご相談ください。遠方の場合は別途お見積もりをいたします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-inner" style="text-align:center;">
+      <div class="section-tag">CONTACT</div>
+      <h2 class="section-title" style="margin:12px 0;">エリアについてのご相談</h2>
+      <p class="section-lead" style="margin-bottom:28px;">「うちのエリアは対応できる？」お気軽にお問い合わせください</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="tel:08042248880" class="btn-primary">📞 080-4224-8880</a>
+        <a href="https://page.line.me/225deoky" class="btn-line" target="_blank" rel="noopener noreferrer">LINEで相談する</a>
+      </div>
+    </div>
+  </section>
+</Layout>

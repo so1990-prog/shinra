@@ -1,12 +1,30 @@
 ---
+import '../styles/global.css';
+
 export interface Props {
   title?: string;
   description?: string;
+  currentPath?: string;
 }
+
 const {
-  title = '浜松コンパニオン｜森羅 - 高品質なコンパニオン派遣サービス',
-  description = '浜松市でコンパニオンをお探しなら森羅へ。宴会・パーティー・各種イベントに対応。上品で明るいスタッフが心を込めておもてなしいたします。お気軽にお問い合わせください。',
+  title = '浜松コンパニオン派遣【森羅】浜松・静岡西部No.1｜宴会・パーティー対応',
+  description = '浜松市・静岡県西部のコンパニオン派遣なら森羅。業界15年以上・在籍150名超。宴会・懇親会・パーティーに明るく気さくな女の子を派遣。1名15,000円〜。当日相談OK。まずはLINEでお気軽にご相談ください。',
+  currentPath = '/',
 } = Astro.props;
+
+const LINE_URL = 'https://page.line.me/225deoky';
+const TEL = '080-4224-8880';
+const TEL_PLAIN = '08042248880';
+
+const navLinks = [
+  { href: '/', label: 'TOP' },
+  { href: '/hajimete/', label: '初めてのお客様へ' },
+  { href: '/ryokin/', label: '料金システム' },
+  { href: '/yoyaku/', label: '仮予約フォーム' },
+  { href: '/area/', label: '対応エリア' },
+  { href: '/recruit/', label: '求人情報' },
+];
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -15,17 +33,95 @@ const {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
-  <meta name="keywords" content="浜松 コンパニオン,浜松 コンパニオン派遣,浜松 宴会,浜松 パーティー,静岡 コンパニオン,森羅" />
+  <meta name="keywords" content="浜松 コンパニオン,浜松コンパニオン派遣,浜松 宴会コンパニオン,静岡 コンパニオン,浜松市 コンパニオン,森羅,SHINRA" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ja_JP" />
+  <link rel="canonical" href={`https://shinra0101.com${currentPath}`} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles/global.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">{JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "森羅（SHINRA）浜松コンパニオン派遣",
+    "description": "浜松市・静岡県西部のコンパニオン派遣サービス。宴会・パーティー・各種イベントに対応。",
+    "url": "https://shinra0101.com/",
+    "telephone": TEL,
+    "email": "shinra.hamamatsu.0101@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "浜松市",
+      "addressRegion": "静岡県",
+      "addressCountry": "JP"
+    },
+    "areaServed": ["浜松市","湖西市","磐田市","袋井市","掛川市","菊川市","御前崎市","牧之原市","島田市"],
+    "openingHours": "Mo-Su 10:00-22:00",
+    "sameAs": ["https://www.instagram.com/shinra.hamamatsu/", LINE_URL]
+  })}</script>
 </head>
 <body>
+  <!-- TOP BAR -->
+  <div class="topbar">
+    📞 {TEL}　|　受付時間 10:00〜22:00（年中無休）　|　まずはお気軽にLINEでご相談ください♪
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <a href="/" class="logo">
+      <div class="logo-name">森羅</div>
+      <div class="logo-sub">浜松コンパニオン派遣 / SHINRA</div>
+    </a>
+    <div class="header-right">
+      <div class="header-tel">
+        <a href={`tel:${TEL_PLAIN}`}>📞 {TEL}</a>
+        <div class="header-time">受付 10:00〜22:00</div>
+      </div>
+      <a href={LINE_URL} class="header-line-btn" target="_blank" rel="noopener noreferrer">
+        LINE相談
+      </a>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    {navLinks.map(link => (
+      <a href={link.href} class={currentPath === link.href ? 'active' : ''}>{link.label}</a>
+    ))}
+  </nav>
+
+  <!-- MAIN CONTENT -->
   <slot />
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">森羅</div>
+    <p class="footer-info">
+      浜松コンパニオン派遣サービス<br />
+      受付時間：10:00〜22:00（年中無休）<br />
+      TEL: {TEL}　|　E-mail: shinra.hamamatsu.0101@gmail.com
+    </p>
+    <div class="footer-nav">
+      {navLinks.map(link => <a href={link.href}>{link.label}</a>)}
+    </div>
+    <p class="footer-copy">&copy; 2024 森羅（SHINRA）All Rights Reserved.</p>
+  </footer>
+
+  <!-- ===== 常時表示フローティングバー ===== -->
+  <div class="float-bar">
+    <a href={`tel:${TEL_PLAIN}`} class="float-bar-item float-tel">
+      <span class="fb-icon">📞</span>
+      <span>電話で相談</span>
+    </a>
+    <a href={LINE_URL} class="float-bar-item float-line" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:22px;height:22px;fill:#fff;"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      <span>LINEで相談</span>
+    </a>
+    <a href="/yoyaku/" class="float-bar-item float-form">
+      <span class="fb-icon">📝</span>
+      <span>仮予約フォーム</span>
+    </a>
+  </div>
 </body>
 </html>
