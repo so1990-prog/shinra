@@ -1,0 +1,31 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = '浜松コンパニオン｜森羅 - 高品質なコンパニオン派遣サービス',
+  description = '浜松市でコンパニオンをお探しなら森羅へ。宴会・パーティー・各種イベントに対応。上品で明るいスタッフが心を込めておもてなしいたします。お気軽にお問い合わせください。',
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="keywords" content="浜松 コンパニオン,浜松 コンパニオン派遣,浜松 宴会,浜松 パーティー,静岡 コンパニオン,森羅" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ja_JP" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/global.css" />
+</head>
+<body>
+  <slot />
+</body>
+</html>
