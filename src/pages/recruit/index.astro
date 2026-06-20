@@ -77,7 +77,7 @@ import Layout from '../../layouts/Layout.astro';
 
         <div class="inline-form" style="max-width:640px;">
           <h3>📝 コンパニオン応募フォーム</h3>
-          <form action="https://formspree.io/f/shinra-recruit" method="POST">
+          <form action="https://formspree.io/f/shinra-recruit" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="apply_type" value="コンパニオン" />
 
             <div class="form-row">
@@ -138,8 +138,9 @@ import Layout from '../../layouts/Layout.astro';
               </select>
             </div>
             <div class="form-row">
-              <label>顔写真</label>
-              <p style="font-size:0.78rem;color:var(--gray-light);">フォームでは送信できないため、LINEまたはメールにてお送りください。</p>
+              <label>顔写真 <span class="req">必須</span></label>
+              <input type="file" name="photo" accept="image/*" required />
+              <p style="font-size:0.75rem;color:var(--gray-light);margin-top:4px;">JPG・PNG・HEICなど画像ファイルを添付してください</p>
             </div>
             <div class="form-row">
               <label>その他・質問など</label>

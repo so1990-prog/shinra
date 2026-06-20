@@ -25,6 +25,7 @@ const navLinks = [
   { href: '/area/', label: '対応エリア' },
   { href: '/recruit/', label: '求人情報' },
 ];
+const INSTAGRAM_URL = 'https://www.instagram.com/shinra.hamamatsu/';
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -87,6 +88,7 @@ const navLinks = [
     {navLinks.map(link => (
       <a href={link.href} class={currentPath === link.href ? 'active' : ''}>{link.label}</a>
     ))}
+    <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">📷 Instagram</a>
   </nav>
 
   <!-- MAIN CONTENT -->
@@ -101,6 +103,7 @@ const navLinks = [
     </p>
     <div class="footer-nav">
       {navLinks.map(link => <a href={link.href}>{link.label}</a>)}
+      <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">📷 Instagram</a>
     </div>
     <p class="footer-copy">&copy; 2024 SHINRA All Rights Reserved.</p>
   </footer>
